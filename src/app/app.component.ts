@@ -15,9 +15,24 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.http.get('http://localhost:5065/api/User').subscribe({
-      next: response => this.users = response,
-      error: error => console.log(error),
-      complete: () => console.log('La solicitud esta completa')
+      // next: response => this.users = response,
+      // error: error => console.log(error),
+      // complete: () => console.log('La solicitud esta completa')
+
+      //NUEVO
+      next: (response) => {
+        // Añadimos a la lista de elementos nuestro nuevos valores
+        this.users = response;
+        console.log(this.users);
+      },
+      error: (error) => {
+        console.error('Error al crear el elemento:', error);
+      },
+      complete: () => {
+        //Recragamos la lista de elementos en pantalla
+        console.log('La solicitud esta completa')
+      }
+      //FIN NUEVO
     })
   }
 
