@@ -38,6 +38,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 
+import {LayoutModule} from '@angular/cdk/layout';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -80,7 +82,8 @@ import { MatTreeModule } from '@angular/material/tree';
     MatTimepickerModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatTreeModule
+    MatTreeModule,
+    LayoutModule
   ]
 })
 export class MaterialModule { }
